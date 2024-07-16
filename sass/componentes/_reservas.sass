@@ -1,0 +1,73 @@
+main
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 20px
+
+  section
+    width: 100%
+
+    article
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      .titulosH1
+        font-size: 2em
+        margin-bottom: 10px
+
+      .explicacionSobreReservas
+        font-size: 1.2em
+        text-align: center
+        margin-bottom: 20px
+
+      .formularioDeReservas
+        width: 100%
+        display: flex
+        justify-content: center
+        margin-bottom: 20px
+
+        .listaDeInputsDeReservas
+          width: 100%
+          display: flex
+          flex-direction: column
+          align-items: center
+          list-style: none
+          padding: 0
+
+          li
+            width: 100%
+            margin-bottom: 10px
+
+            input, textarea
+              width: 90%
+              padding: 10px
+              font-size: 1em
+              border-radius: 5px
+              border: 1px solid #ccc
+
+            input[type="button"]
+              width: 50%
+              background-color: #007bff
+              color: white
+              border: none
+              cursor: pointer
+              transition: background-color 0.3s ease
+
+              &:hover
+                background-color: #0056b3
+
+      .explicacionSobreComoLlegar
+        font-size: 1.2em
+        text-align: center
+        margin-bottom: 20px
+
+      .mapaInteractivo
+        width: 100%
+        height: 300px
+        background-color: #e9ecef
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 10px
+        margin-bottom: 20px
