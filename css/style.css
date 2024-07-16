@@ -1,0 +1,289 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: #495057;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(214, 214, 214, 0.85);
+    margin: 0 20px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.headerBox .d-lg-flex .navegacionItem {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    color: black;
+    text-decoration: none;
+}
+
+.headerBox .d-lg-flex .navegacionItem:first-child {
+    border-left: none;
+}
+
+.headerBox .d-lg-flex .navegacionItem:last-child {
+    border-right: none;
+}
+
+.container {
+    flex: 1;
+    margin: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-left, .col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-left {
+    padding-right: 20px;
+}
+
+.col-right {
+    align-items: center;
+    justify-content: center;
+}
+
+.titulosH1 {
+    font-size: 2em; /* Agranda el tamaño de la fuente del h1 */
+}
+
+.parafoDelIndex {
+    font-size: 1.2em; /* Agranda el tamaño de la fuente del párrafo */
+}
+
+.imagenesAcompañantesDelParrafo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+.imagenDelParrafo {
+    max-width: calc(50% - 10px);
+    max-height: calc(60% - 10px);
+    margin: 10px 20px;
+}
+
+.fotoDeLaCafetaria {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.imgPromocion {
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(20% - 10px);
+    max-height: calc(20% - 10px);
+    margin: 10px 10px;
+}
+
+.imgMenu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ajusta el ancho al 100% */
+    margin: 10px 10px;
+}
+
+.imgPromocionLeft {
+    max-width: 50%; /* Ajusta el ancho al 50% */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin: 10px;
+}
+
+.imgPromocionRight {
+    max-width: 100%; /* Ajusta el ancho al 100% */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin: 10px;
+}
+
+footer {
+    background-color: #252E38;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    padding: 20px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    color: #D6D6D6;
+    font-size: 18px;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+}
+
+.qrAfip {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.logoEnFooter {
+    margin: 10px;
+    width: 45px;
+    height: 45px;
+    align-items: end;
+}
+
+@media (max-width: 767px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-toggle:checked + .navbar-toggler + .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-collapse {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-current-page {
+        display: block;
+        color: black;
+        font-size: 18px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navbar-collapse::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: black;
+        display: block;
+    }
+
+    .navbar-collapse::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: black;
+        display: block;
+    }
+
+    .navbar .nav-item .nav-link {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .header-links {
+        display: none;
+    }
+
+    .imagenesAcompañantesDelParrafo {
+        display: none;
+    }
+
+    .col-left, .col-right {
+        flex: 1 1 100%;
+    }
+
+    .fotoDeLaCafetaria {
+        margin-top: 20px;
+        width: 100%;
+        order: 2; /* Mueve la imagen debajo del párrafo en la versión móvil */
+    }
+
+    .parafoDelIndex {
+        order: 1; /* Asegura que el párrafo esté encima de la imagen */
+    }
+}
