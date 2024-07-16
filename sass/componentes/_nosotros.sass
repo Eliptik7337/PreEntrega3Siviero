@@ -28,7 +28,18 @@ main
         max-height: 315px
         margin-bottom: 20px
 
+      // Ocultar imágenes en la versión móvil
       img
-        width: 100%
-        max-width: 300px
-        margin: 10px 0
+        display: none
+
+@media (min-width: 768px)
+  main
+    padding: 40px
+
+    section
+      article
+        // Mostrar imágenes en la versión de PC
+        img
+          display: block
+          max-width: 100%
+          margin-bottom: 20px
