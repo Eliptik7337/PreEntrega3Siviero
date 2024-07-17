@@ -1,1 +1,91 @@
+main
+  section
+    article
+      h1.titulosH1
+        font-size: 2em
+        text-align: center
+        margin-bottom: 10px
 
+      p
+        font-size: 1.2em
+        text-align: center
+        margin-bottom: 20px
+
+      .formularioDeContacto
+        margin: 0 20px
+
+        .listaDeInputsDeContacto
+          list-style: none
+          padding: 0
+
+          li
+            margin-bottom: 10px
+
+            input[type="email"], input[type="text"], textarea
+              width: 100%
+              padding: 8px
+              border: 1px solid #ccc
+
+            input[type="button"]
+              width: 100%
+              padding: 8px
+              border: none
+              background-color: #007bff
+              color: white
+              cursor: pointer
+
+      .redesEnContacto
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 20px
+
+        .iconosConLinksDeContacto
+          list-style: none
+          padding: 0
+          display: flex
+          justify-content: center
+          margin-bottom: 20px
+
+          li
+            margin-right: 10px
+
+            a
+              display: block
+              width: 40px
+              height: 40px
+              border-radius: 50%
+              overflow: hidden
+              transition: transform 0.3s ease-in-out
+
+              img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+              &:hover
+                transform: scale(1.1)
+
+          // Mostrar solo las tres primeras imágenes en dispositivos móviles
+          @media (max-width: 767px)
+            li:nth-child(n+4)
+              display: none
+
+        .bannersEnContacto
+          list-style: none
+          padding: 0
+          display: flex
+          justify-content: center
+
+          li
+            margin-left: 10px
+
+            .bannerEnContacto
+              width: 100px
+              height: 100px
+              object-fit: cover
+
+          // Ocultar los banners en dispositivos móviles
+          @media (max-width: 767px)
+            .bannersEnContacto
+              display: none
