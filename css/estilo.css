@@ -430,7 +430,7 @@ main section article .titulosH1 {
 }
 main section article .explicacionSobreReservas {
   font-size: 1.2em;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
 }
 main section article .formularioDeReservas {
@@ -473,10 +473,10 @@ main section article .formularioDeReservas .listaDeInputsDeReservas li input[typ
 }
 main section article .explicacionSobreComoLlegar {
   font-size: 1.2em;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
 }
-main section article .mapaInteractivo {
+main section article .mapa {
   width: 100%;
   height: 300px;
   background-color: #e9ecef;
@@ -485,8 +485,32 @@ main section article .mapaInteractivo {
   align-items: center;
   border-radius: 10px;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 
+@media (min-width: 768px) {
+  .contenidoPC {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .izquierda, .derecha {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 0 10px;
+  }
+  .izquierda {
+    margin-right: 20px;
+  }
+  .derecha {
+    margin-left: 20px;
+  }
+  .explicacionSobreReservas, .formularioDeReservas, .explicacionSobreComoLlegar, .mapa {
+    width: 100%;
+    margin: 0;
+  }
+}
 main section article h1.titulosH1 {
   font-size: 2em;
   text-align: center;
