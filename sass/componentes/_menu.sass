@@ -1,0 +1,94 @@
+.container 
+    max-width: 1200px
+    margin: 0 auto
+    padding: 20px
+
+
+.row 
+    display: flex
+    justify-content: space-between
+
+
+.col-left 
+    width: 60%
+
+
+.col-right 
+    width: 35%
+
+
+.titulosH1 
+    font-size: 2rem
+    margin-bottom: 20px
+
+
+.cajaConLasOfertas 
+    display: flex
+    flex-direction: column
+
+    .promocion 
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+
+        .imgPromocionLeft 
+            width: 150px // Tamaño reducido de las imágenes
+            height: auto
+            margin-right: 20px
+        
+
+        p 
+            flex: 1
+        
+    
+
+
+// Estilos específicos para el carrusel
+.carousel 
+    position: relative
+    overflow: hidden
+
+    .carousel-inner 
+        display: flex
+        transition: transform 0.5s ease
+
+        .carousel-item 
+            min-width: 100%
+            transition: opacity 0.5s ease
+
+            img 
+                width: 100%
+                height: auto
+            
+        
+
+        .carousel-item:not(.active) 
+            opacity: 0
+        
+    
+
+    .carousel-control-prev,
+    .carousel-control-next 
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        width: 5%
+        height: 100%
+        cursor: pointer
+        background: rgba(255, 255, 255, 0.7)
+        border: none
+        color: black
+        font-size: 18px
+
+        &:hover 
+            background: rgba(255, 255, 255, 1)
+        
+    
+
+    .carousel-control-prev 
+        left: 0
+    
+
+    .carousel-control-next 
+        right: 0
+    
