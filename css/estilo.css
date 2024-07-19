@@ -225,6 +225,70 @@ footer {
   align-items: end;
 }
 
+@media (max-width: 767px) {
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar-toggle:checked + .navbar-toggler + .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-current-page {
+    display: block;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .navbar-collapse::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: black;
+    display: block;
+  }
+  .navbar-collapse::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: black;
+    display: block;
+  }
+  .navbar .nav-item .nav-link {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .header-links {
+    display: none;
+  }
+  .imagenesAcompañantesDelParrafo {
+    display: none;
+  }
+  .col-left, .col-right {
+    flex: 1 1 100%;
+  }
+  .fotoDeLaCafetaria {
+    margin-top: 20px;
+    width: 100%;
+    order: 2;
+  }
+  .parafoDelIndex {
+    order: 1;
+  }
+}
 .container {
   flex: 1;
   margin: 20px;
@@ -302,70 +366,198 @@ footer {
   margin: 10px;
 }
 
-@media (max-width: 767px) {
-  .navbar-toggler {
-    display: block;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-left {
+  width: 60%;
+}
+
+.col-right {
+  width: 35%;
+}
+
+.titulosH1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cajaConLasOfertas {
+  display: flex;
+  flex-direction: column;
+}
+.cajaConLasOfertas .promocion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.cajaConLasOfertas .promocion .imgPromocionLeft {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+.cajaConLasOfertas .promocion p {
+  flex: 1;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.carousel .carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel .carousel-inner .carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+}
+.carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: auto;
+}
+.carousel .carousel-inner .carousel-item:not(.active) {
+  opacity: 0;
+}
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+  height: 100%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  color: black;
+  font-size: 18px;
+}
+.carousel .carousel-control-prev:hover,
+.carousel .carousel-control-next:hover {
+  background: rgb(255, 255, 255);
+}
+.carousel .carousel-control-prev {
+  left: 0;
+}
+.carousel .carousel-control-next {
+  right: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.main section {
+  width: 100%;
+}
+.main section article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main section article .titulosH1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.main section article .explicacionSobreReservas {
+  font-size: 1.2em;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.main section article .formularioDeReservas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.main section article .formularioDeReservas .listaDeInputsDeReservas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.main section article .formularioDeReservas .listaDeInputsDeReservas li {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.main section article .formularioDeReservas .listaDeInputsDeReservas li input, .main section article .formularioDeReservas .listaDeInputsDeReservas li textarea {
+  width: 90%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.main section article .formularioDeReservas .listaDeInputsDeReservas li input[type=button] {
+  width: 90%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.main section article .formularioDeReservas .listaDeInputsDeReservas li input[type=button]:hover {
+  background-color: #0056b3;
+}
+.main section article .explicacionSobreComoLlegar {
+  font-size: 1.2em;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.main section article .mapa {
+  width: 100%;
+  height: 300px;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.main section article .mapa img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .main .contenidoPC {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
-  .navbar-toggle:checked + .navbar-toggler + .navbar-collapse {
+  .main .izquierda, .main .derecha {
     display: flex;
     flex-direction: column;
+    width: 45%;
+    margin: 0 10px;
   }
-  .navbar-collapse {
-    display: none;
-    flex-direction: column;
-    align-items: center;
+  .main .izquierda {
+    margin-right: 20px;
   }
-  .navbar-nav {
-    flex-direction: column;
+  .main .derecha {
+    margin-left: 20px;
+  }
+  .main .mapa {
     width: 100%;
-  }
-  .nav-item {
-    width: 100%;
-    text-align: center;
-  }
-  .navbar-current-page {
-    display: block;
-    color: black;
-    font-size: 18px;
-    text-align: center;
-    margin: 10px 0;
-  }
-  .navbar-collapse::before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: black;
-    display: block;
-  }
-  .navbar-collapse::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: black;
-    display: block;
-  }
-  .navbar .nav-item .nav-link {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  .header-links {
-    display: none;
-  }
-  .imagenesAcompañantesDelParrafo {
-    display: none;
-  }
-  .col-left, .col-right {
-    flex: 1 1 100%;
-  }
-  .fotoDeLaCafetaria {
-    margin-top: 20px;
-    width: 100%;
-    order: 2;
-  }
-  .parafoDelIndex {
-    order: 1;
+    margin: 0;
   }
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -429,36 +621,36 @@ footer {
     margin-bottom: 10px;
   }
 }
-main {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
 }
-main section {
+.main section {
   width: 100%;
 }
-main section article {
+.main section article {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main section article .titulosH1 {
+.main section article .titulosH1 {
   font-size: 2em;
   margin-bottom: 10px;
 }
-main section article .explicacionSobreReservas {
+.main section article .explicacionSobreReservas {
   font-size: 1.2em;
   text-align: left;
   margin-bottom: 20px;
 }
-main section article .formularioDeReservas {
+.main section article .formularioDeReservas {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
-main section article .formularioDeReservas .listaDeInputsDeReservas {
+.main section article .formularioDeReservas .listaDeInputsDeReservas {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -466,20 +658,20 @@ main section article .formularioDeReservas .listaDeInputsDeReservas {
   list-style: none;
   padding: 0;
 }
-main section article .formularioDeReservas .listaDeInputsDeReservas li {
+.main section article .formularioDeReservas .listaDeInputsDeReservas li {
   width: 100%;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
 }
-main section article .formularioDeReservas .listaDeInputsDeReservas li input, main section article .formularioDeReservas .listaDeInputsDeReservas li textarea {
+.main section article .formularioDeReservas .listaDeInputsDeReservas li input, .main section article .formularioDeReservas .listaDeInputsDeReservas li textarea {
   width: 90%;
   padding: 10px;
   font-size: 1em;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-main section article .formularioDeReservas .listaDeInputsDeReservas li input[type=button] {
+.main section article .formularioDeReservas .listaDeInputsDeReservas li input[type=button] {
   width: 90%;
   background-color: #007bff;
   color: white;
@@ -487,15 +679,15 @@ main section article .formularioDeReservas .listaDeInputsDeReservas li input[typ
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-main section article .formularioDeReservas .listaDeInputsDeReservas li input[type=button]:hover {
+.main section article .formularioDeReservas .listaDeInputsDeReservas li input[type=button]:hover {
   background-color: #0056b3;
 }
-main section article .explicacionSobreComoLlegar {
+.main section article .explicacionSobreComoLlegar {
   font-size: 1.2em;
   text-align: left;
   margin-bottom: 20px;
 }
-main section article .mapa {
+.main section article .mapa {
   width: 100%;
   height: 300px;
   background-color: #e9ecef;
@@ -506,56 +698,72 @@ main section article .mapa {
   margin-bottom: 20px;
   margin-top: 40px;
 }
-
+.main section article .mapa img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
 @media (min-width: 768px) {
-  .contenidoPC {
+  .main .contenidoPC {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
-  .izquierda, .derecha {
+  .main .izquierda, .main .derecha {
     display: flex;
     flex-direction: column;
     width: 45%;
     margin: 0 10px;
   }
-  .izquierda {
+  .main .izquierda {
     margin-right: 20px;
   }
-  .derecha {
+  .main .derecha {
     margin-left: 20px;
   }
-  .explicacionSobreReservas, .formularioDeReservas, .explicacionSobreComoLlegar, .mapa {
+  .main .mapa {
     width: 100%;
     margin: 0;
   }
 }
-main section article h1.titulosH1 {
+
+main section article {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+main section article .contenido-izquierdo {
+  margin-left: 20px;
+  width: 50%;
+}
+main section article .contenido-izquierdo h1.titulosH1 {
   font-size: 2em;
-  text-align: center;
   margin-bottom: 10px;
 }
-main section article p {
+main section article .contenido-izquierdo p {
   font-size: 1.2em;
-  text-align: center;
   margin-bottom: 20px;
 }
-main section article .formularioDeContacto {
+main section article .contenido-izquierdo .formularioDeContacto {
   margin: 0 20px;
 }
-main section article .formularioDeContacto .listaDeInputsDeContacto {
+main section article .contenido-izquierdo .formularioDeContacto .listaDeInputsDeContacto {
   list-style: none;
   padding: 0;
 }
-main section article .formularioDeContacto .listaDeInputsDeContacto li {
+main section article .contenido-izquierdo .formularioDeContacto .listaDeInputsDeContacto li {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
-main section article .formularioDeContacto .listaDeInputsDeContacto li input[type=email], main section article .formularioDeContacto .listaDeInputsDeContacto li input[type=text], main section article .formularioDeContacto .listaDeInputsDeContacto li textarea {
+main section article .contenido-izquierdo .formularioDeContacto .listaDeInputsDeContacto li input[type=email], main section article .contenido-izquierdo .formularioDeContacto .listaDeInputsDeContacto li input[type=text], main section article .contenido-izquierdo .formularioDeContacto .listaDeInputsDeContacto li textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
 }
-main section article .formularioDeContacto .listaDeInputsDeContacto li input[type=button] {
+main section article .contenido-izquierdo .formularioDeContacto .listaDeInputsDeContacto li input[type=button] {
   width: 100%;
   padding: 8px;
   border: none;
@@ -563,59 +771,65 @@ main section article .formularioDeContacto .listaDeInputsDeContacto li input[typ
   color: white;
   cursor: pointer;
 }
-main section article .redesEnContacto {
+main section article .contenido-derecho {
+  margin-right: 20px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+main section article .contenido-derecho .redesEnContacto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 20px 0;
 }
-main section article .redesEnContacto .iconosConLinksDeContacto {
+main section article .contenido-derecho .redesEnContacto .iconosConLinksDeContacto {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
-main section article .redesEnContacto .iconosConLinksDeContacto li {
+main section article .contenido-derecho .redesEnContacto .iconosConLinksDeContacto li {
   margin-right: 10px;
 }
-main section article .redesEnContacto .iconosConLinksDeContacto li a {
+main section article .contenido-derecho .redesEnContacto .iconosConLinksDeContacto li a {
   display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
-main section article .redesEnContacto .iconosConLinksDeContacto li a img {
+main section article .contenido-derecho .redesEnContacto .iconosConLinksDeContacto li a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-main section article .redesEnContacto .iconosConLinksDeContacto li a:hover {
+main section article .contenido-derecho .redesEnContacto .iconosConLinksDeContacto li a:hover {
   transform: scale(1.1);
 }
 @media (max-width: 767px) {
-  main section article .redesEnContacto .iconosConLinksDeContacto li:nth-child(n+4) {
+  main section article .contenido-derecho .redesEnContacto .iconosConLinksDeContacto li:nth-child(n+4) {
     display: none;
   }
 }
-main section article .redesEnContacto .bannersEnContacto {
+main section article .contenido-derecho .redesEnContacto .bannersEnContacto {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
 }
-main section article .redesEnContacto .bannersEnContacto li {
+main section article .contenido-derecho .redesEnContacto .bannersEnContacto li {
   margin-left: 10px;
 }
-main section article .redesEnContacto .bannersEnContacto li .bannerEnContacto {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+main section article .contenido-derecho .redesEnContacto .bannersEnContacto li .bannerEnContacto {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 @media (max-width: 767px) {
-  main section article .redesEnContacto .bannersEnContacto .bannersEnContacto {
+  main section article .contenido-derecho .redesEnContacto .bannersEnContacto .bannersEnContacto {
     display: none;
   }
 }

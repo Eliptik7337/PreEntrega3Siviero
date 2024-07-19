@@ -1,91 +1,106 @@
 main
-  section
-    article
-      h1.titulosH1
-        font-size: 2em
-        text-align: center
-        margin-bottom: 10px
+    section
+        article
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            padding-top: 20px // Separación del header
 
-      p
-        font-size: 1.2em
-        text-align: center
-        margin-bottom: 20px
+            .contenido-izquierdo
+                margin-left: 20px
+                width: 50%
 
-      .formularioDeContacto
-        margin: 0 20px
+                h1.titulosH1
+                    font-size: 2em
+                    margin-bottom: 10px
 
-        .listaDeInputsDeContacto
-          list-style: none
-          padding: 0
+                p
+                    font-size: 1.2em
+                    margin-bottom: 20px
 
-          li
-            margin-bottom: 10px
+                .formularioDeContacto
+                    margin: 0 20px
 
-            input[type="email"], input[type="text"], textarea
-              width: 100%
-              padding: 8px
-              border: 1px solid #ccc
+                    .listaDeInputsDeContacto
+                        list-style: none
+                        padding: 0
 
-            input[type="button"]
-              width: 100%
-              padding: 8px
-              border: none
-              background-color: #007bff
-              color: white
-              cursor: pointer
+                        li
+                            margin-bottom: 10px
+                            display: flex
+                            align-items: center
 
-      .redesEnContacto
-        display: flex
-        flex-direction: column
-        align-items: center
-        margin: 20px
+                            input[type="email"], input[type="text"], textarea
+                                width: 100%
+                                padding: 8px
+                                border: 1px solid #ccc
 
-        .iconosConLinksDeContacto
-          list-style: none
-          padding: 0
-          display: flex
-          justify-content: center
-          margin-bottom: 20px
+                            input[type="button"]
+                                width: 100%
+                                padding: 8px
+                                border: none
+                                background-color: #007bff
+                                color: white
+                                cursor: pointer
 
-          li
-            margin-right: 10px
+            .contenido-derecho
+                margin-right: 20px
+                width: 40%
+                display: flex
+                flex-direction: column
 
-            a
-              display: block
-              width: 40px
-              height: 40px
-              border-radius: 50%
-              overflow: hidden
-              transition: transform 0.3s ease-in-out
+                .redesEnContacto
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    margin: 20px 0
 
-              img
-                width: 100%
-                height: 100%
-                object-fit: cover
+                    .iconosConLinksDeContacto
+                        list-style: none
+                        padding: 0
+                        display: flex
+                        justify-content: center
+                        margin-bottom: 20px
 
-              &:hover
-                transform: scale(1.1)
+                        li
+                            margin-right: 10px
 
-          // Mostrar solo las tres primeras imágenes en dispositivos móviles
-          @media (max-width: 767px)
-            li:nth-child(n+4)
-              display: none
+                            a
+                                display: block
+                                width: 50px
+                                height: 50px
+                                overflow: hidden
+                                transition: transform 0.3s ease-in-out
 
-        .bannersEnContacto
-          list-style: none
-          padding: 0
-          display: flex
-          justify-content: center
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    object-fit: cover
 
-          li
-            margin-left: 10px
+                                &:hover
+                                    transform: scale(1.1)
 
-            .bannerEnContacto
-              width: 100px
-              height: 100px
-              object-fit: cover
+                        // Mostrar solo las tres primeras imágenes en dispositivos móviles
+                        @media (max-width: 767px)
+                            li:nth-child(n+4)
+                                display: none
 
-          // Ocultar los banners en dispositivos móviles
-          @media (max-width: 767px)
-            .bannersEnContacto
-              display: none
+                    .bannersEnContacto
+                        list-style: none
+                        padding: 0
+                        display: flex
+                        justify-content: center
+
+                        li
+                            margin-left: 10px
+
+                            .bannerEnContacto
+                                width: auto
+                                height: auto
+                                max-width: 100%
+                                max-height: 100%
+
+                        // Ocultar los banners en dispositivos móviles
+                        @media (max-width: 767px)
+                            .bannersEnContacto
+                                display: none
